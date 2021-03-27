@@ -10,7 +10,7 @@ class Graph:
 
     def dfs(self, start):
         visited = [False]*self.V
-        self.dfsUtil(start, visited)
+        self.__dfsUtil(start, visited)
 
     def __dfsUtil(self, start, visited):
         visited[start] = True
@@ -39,7 +39,7 @@ class Graph:
         stack = []
         for i in range(self.V):
             if not visited[i]:
-                self.sortUtil(i,visited,stack)
+                self.__sortUtil(i,visited,stack)
         return stack
 
     def __sortUtil(self,v,visited,stack):
