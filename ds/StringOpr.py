@@ -39,7 +39,7 @@ class StringOpr:
             Time Complexity -> O(n*m)
             Space Complexity -> O(n*m)
         '''
-        length = 0
+        length = 0; result = 0
         row, col = 0, 0
 
         for i in range(m+1):
@@ -48,15 +48,13 @@ class StringOpr:
                     dp[i][j] = 0
                 elif x[i-1] == y[j-1]:
                     dp[i][j] = dp[i-1][j-1]+1
+                    result = max(result, dp[i][j])
                     if state and length<dp[i][j]:
                         length = dp[i][j]
                         row = i
                         col = j
                     else:
                         dp[i][j] = 0
-        if length==0:
-            return -1
-
         if state:
             result = ['0']*length
 
@@ -67,7 +65,7 @@ class StringOpr:
                 col -= 1
             return ''.join(result)
         else:
-            return dp[m][n]
+            return result
 
     def __lcsOptim(self, x, y):
         m = len(x)
