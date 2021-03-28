@@ -157,5 +157,11 @@ class AVL:
             return self.leftRotate(root)
   
         return root
+
+    def getMinValueNode(self, root):
+        if root is None or root.left is None:
+            return root
+  
+        return self.getMinValueNode(root.left)
     
         
