@@ -5,3 +5,4 @@ from PatternMatcher import Matcher
 from StringOpr import StringOpr
 from BalancedTree import AVL
 from SpanningTree import Krushkal
+from DP import KadaneAlgo
