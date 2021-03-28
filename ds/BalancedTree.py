@@ -163,5 +163,13 @@ class AVL:
             return root
   
         return self.getMinValueNode(root.left)
+
+    def search(self, root, x):
+        if not root or root.val==x:
+            return root
+
+        if root.val<x:
+            return self.search(root.right, x)
+        return self.search(root.left, x)
     
         
