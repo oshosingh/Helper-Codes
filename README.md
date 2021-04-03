@@ -23,5 +23,11 @@
       1. Longest Palindrome
       2. Longest Common Substring (return Substring and its length both) -> dynamic programming
       3. Longest Common Subsequence (return Subsequence and it length both) -> dynamic programming
+
+#### 7. Dynamic Programming (DP>py)
+      1. Kadanes Algorithm
+
+#### 8. Spanning Tree (SpanningTree.py)
+      1. Krushkal Algorithm
       
  
