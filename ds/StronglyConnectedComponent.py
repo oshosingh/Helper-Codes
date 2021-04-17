@@ -56,7 +56,7 @@ class KosarajuSCC:
                 components.append(comp)
         return components
 
-    def checkSCC(self, node) -> bool:
+    def checkSCC(self) -> bool:
 
         def dfs(visited, vertex):
             visited[idx] = True
