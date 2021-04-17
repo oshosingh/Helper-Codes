@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-class Kosaraju:
+class KosarajuSCC:
     def __init__(self, v):
         self.graph = defaultdict(list)
         self.V = v
@@ -55,6 +55,41 @@ class Kosaraju:
                 print()
                 components.append(comp)
         return components
+
+    def checkSCC(self, node) -> bool:
+
+        def dfs(visited, vertex):
+            visited[idx] = True
+
+            for i in self.graph[vertex]:
+                if not visited[i]:
+                    dfs(visited, i)
+    
+        visited = [False]*self.V
+        
+        for i in range(self.V):
+            if not visited[i]:
+                dfs(visited, i)
+
+        if any(i==False for i in visited):
+            return False
+
+        new_graph = __getTranspose()
+        visited = [False]*self.V
+
+        for i in range(self.V):
+            if not visited[i]:
+                dfs(visited, i)
+
+        if any(i==False for i in visited):
+            return False
+
+        return True
+        
+            
+        
+
+
                 
         
         
