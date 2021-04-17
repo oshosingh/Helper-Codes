@@ -23,23 +23,23 @@ class Matcher:
                         lps[i] = 0
                         i += 1
                         
-            lps = [0]*m
-            constructLPS()
-            i = 0; j = 0
-            indices = []
+        lps = [0]*m
+        constructLPS()
+        i = 0; j = 0
+        indices = []
 
-            while i<n:
-                if self.text[i]==self.pat[j]:
-                    i += 1
-                    j += 1
-                if j==m:
-                    indices.append(i-j)
-                    j = lps[j-1]
-                elif (i<n and self.pat[j]!=self.text[i]):
-                        if j!=0:
-                            j = lps[j-1]
-                        else:
-                            i += 1
-            return indices
+        while i<n:
+            if self.text[i]==self.pat[j]:
+                i += 1
+                j += 1
+            if j==m:
+                indices.append(i-j)
+                j = lps[j-1]
+            elif (i<n and self.pat[j]!=self.text[i]):
+                    if j!=0:
+                        j = lps[j-1]
+                    else:
+                        i += 1
+        return indices
 
                         
