@@ -66,20 +66,14 @@ class KosarajuSCC:
                     dfs(visited, i)
     
         visited = [False]*self.V
-        
-        for i in range(self.V):
-            if not visited[i]:
-                dfs(visited, i)
+        dfs(visited, 0)
 
         if any(i==False for i in visited):
             return False
 
         new_graph = __getTranspose()
         visited = [False]*self.V
-
-        for i in range(self.V):
-            if not visited[i]:
-                dfs(visited, i)
+        dfs(visited, 0)
 
         if any(i==False for i in visited):
             return False
