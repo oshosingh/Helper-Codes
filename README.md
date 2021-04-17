@@ -12,8 +12,9 @@
 #### 3. String Pattern Matching (PatternMatcher.py)
       1. KMP Algorithm
       
-#### 4. Strongly Connected Component (SCC.py)
+#### 4. Strongly Connected Component (StronglyConnectedComponents.py)
       1. Kosaraju's Algorithm (Double DFS)
+      2. CheckSCC methods returns True if Graph is StronglyConnected.
       
 #### 5. Segment Tree (Segment.py)
       1. Array implimentation of Segement Tree
@@ -26,6 +27,7 @@
 
 #### 7. Dynamic Programming (DP>py)
       1. Kadanes Algorithm
+      2. GeneralDP - Basic Dynamic Programming Problems 
 
 #### 8. Spanning Tree (SpanningTree.py)
       1. Krushkal Algorithm
