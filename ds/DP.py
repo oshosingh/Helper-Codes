@@ -28,8 +28,7 @@ class KadaneAlgo:
         return [maxSoFar, [start, end]]
 
 class GeneralDP:
-    def __init__(self):
-        
+
     def lbs(self, arr):
         '''
         Given an array containing n positive integers, a subsequence is called
@@ -58,3 +57,38 @@ class GeneralDP:
             maxim = max(maxim, lis[i]+lds[i]-1)
 
         return maxim
+
+class DPOnGraoh:
+
+    def __init__(self, v):
+        self.V = v
+        self.adj = [[] for i in range(self.V+1)]
+
+    def addEdge(self, u, v):
+        self.adj[u].append(v)
+    
+    def findLongestPath(self):
+        # Find longest path in a directed acyclic graph
+        dp = [0]*(self.V+!)
+        visited = [False]*(self.V+1)
+
+        def dfs(node, visited, dp):
+            visited[node] = True
+
+            for i in range(0, len(self.adj[node])):
+                if not visited[self.adj[node][i]]:
+                    dfs(self.adj[node][i], visited, dp)
+
+            dp[node] = max(dp[node], 1+dp[adj[node][i]])
+
+
+        # Do DFS
+        for i in range(1, self.V+1):
+            if not visited[i]:
+                dfs(i, visited, dp)
+
+        ans = 0
+        for i in range(1, self.V+1):
+            ans = max(ans, dp[i])
+        
+        return ans
